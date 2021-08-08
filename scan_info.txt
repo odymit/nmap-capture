@@ -1,0 +1,49 @@
+❯ nmap -sP 10.164.27.197/16
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-08-07 19:28 CST
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+Nmap scan report for 10.164.0.1
+Host is up (0.0047s latency).
+Nmap scan report for 10.164.27.197
+Host is up (0.00056s latency).
+Nmap scan report for 10.164.43.54
+Host is up (0.14s latency).
+Nmap scan report for 10.164.45.53
+Host is up (0.057s latency).
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+Nmap scan report for 10.164.89.113
+Host is up (0.011s latency).
+Nmap scan report for 10.164.102.35
+Host is up (0.27s latency).
+Nmap scan report for 10.164.104.181
+Host is up (0.98s latency).
+Nmap scan report for 10.164.138.18
+Host is up (0.078s latency).
+Nmap scan report for 10.164.156.48
+Host is up (0.22s latency).
+Stats: 0:35:29 elapsed; 40960 hosts completed (9 up), 4096 undergoing Ping Scan
+Ping Scan Timing: About 4.03% done; ETC: 20:57 (0:53:12 remaining)
+Nmap scan report for 10.164.163.157
+Host is up (0.031s latency).
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+Nmap scan report for 10.164.223.178
+Host is up (0.014s latency).
+Nmap scan report for 10.164.224.5
+Host is up (0.065s latency).
+Nmap scan report for 10.164.229.191
+Host is up (1.2s latency).
+Nmap scan report for 10.164.237.232
+Host is up (1.8s latency).
+Nmap scan report for 10.164.238.185
+Host is up (1.7s latency).
+Stats: 1:02:09 elapsed; 61440 hosts completed (15 up), 4096 undergoing Ping Scan
+Ping Scan Timing: About 8.42% done; ETC: 20:37 (0:06:10 remaining)
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+RTTVAR has grown to over 2.3 seconds, decreasing to 2.0
+Nmap done: 65536 IP addresses (15 hosts up) scanned in 3925.80 seconds
