@@ -15,10 +15,11 @@ ip = get_ip_local()
 netmask = get_netmask(ip)
 network = IPNetwork(str(IPNetwork(str(ip)+str('/')+str(netmask)).network)+'/'+str(netmask))
 
-def start_capture(cmd=''):
+def start_capture():
     time = datetime.datetime.now()
+    os.popen("echo 'start time' > ./capture/{name}.txt".format(name=time.strftime("%Y-%m-%d_%H:%M:%S")+"_start"))
     capture_cmd = "tcpdump -i wlp82s0 -vnn net {ip} -w ./capture/{name}.pcap".format(
-        ip=str(network), name=time.strftime("%Y-%m-%d_%H:%M:%S")+'_nmap_flow_'+str(cmd))
+        ip=str(network), name=time.strftime("%Y-%m-%d_%H:%M:%S")+'_nmap_flow')
     tcpdump = subprocess.Popen(capture_cmd, shell=True)
     os.popen("ps -ef | grep nmap > ./capture/{name}.txt".format(name=time.strftime("%Y-%m-%d_%H:%M:%S")+'_nmap_port'))
     return tcpdump
@@ -57,3 +58,5 @@ for each_ip in alive_ips:
         os.popen("ps -ef | grep nmap > ./capture/{name}.txt".format(name=time.strftime("%Y-%m-%d_%H:%M:%S")+'_nmap_port'))
         ret.read()
 dump.terminate()
+time = datetime.datetime.now()
+os.popen("echo 'start time' > ./capture/{name}.txt".format(name=time.strftime("%Y-%m-%d_%H:%M:%S")+"_end"))
