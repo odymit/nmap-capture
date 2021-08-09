@@ -28,8 +28,9 @@ dump = start_capture()
 
 # get alive ip list
 print("scanning lan alive host, this may take a few minutes...")
-cmd_out = os.popen("nmap -sP "+ str(ip) + ' ' + str(netmask))
+cmd_out = os.popen("nmap -sP "+ str(network) + ' ' + str(netmask))
 content = cmd_out.read()
+cmd_out.close()
 p = "Nmap scan report for ([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)\nHost is up"
 alive_ips = re.findall(p, content)
 print("found ", len(alive_ips), " hosts is up in local area network.")
@@ -49,9 +50,10 @@ cmd_list = [
     "nmap -sO ",
     "nmap -sU ",
 ]
+params = " --host-timeout 5 --max-retries 3"
 for each_ip in alive_ips:
     for nmap_cmd in cmd_list:
-        cmd = nmap_cmd + str(each_ip) + ' ' + str(netmask)
+        cmd = nmap_cmd + str(each_ip) + ' ' + str(netmask) + params
         print(cmd)
         time = datetime.datetime.now()
         ret = os.popen(cmd)
