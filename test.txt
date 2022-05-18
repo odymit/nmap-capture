@@ -1,3 +1,0 @@
-dorian    110507       1  0 21:00 ?        00:00:03 /usr/bin/kate -b /home/dorian/repos/nmap_capture/scan_info.txt
-dorian    118737  118733  0 22:23 pts/2    00:00:00 /bin/sh -c ps -ef | grep nmap > test.txt
-dorian    118739  118737  0 22:23 pts/2    00:00:00 grep nmap
